@@ -30,7 +30,7 @@ class NITTFEST extends StatelessWidget {
       onUnknownRoute: (settings) {
         Get.offAndToNamed(NavigationRoutes.splashRoute);
       },
-      initialRoute: NavigationRoutes.inductionsHomeRoute,
+      initialRoute: NavigationRoutes.inductionsFormsRoute,
       getPages: NavigationPages.getPages(),
     );
   }
