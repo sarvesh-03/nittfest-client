@@ -13,7 +13,7 @@ class HomePage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    ImageProvider bg = const AssetImage('assets/bg1.webp');
+    ImageProvider bg = const AssetImage('assets/bg2.webp');
     return Scaffold(
       body: Container(
         height: size.height,

@@ -12,12 +12,14 @@ class HomePagePhone extends StatelessWidget {
     return Column(children: [
       Expanded(
         child: Content(
-            logoSize: size.height * 0.20,
-            headerSize: size.height * 0.050,
-            bodySize: size.height * 0.030,
-            gapSize: size.height * 0.005,
-            gapSize2: size.height * 0.025,
-            buttonSize: size.height * 0.025),
+          logoSize: size.height * 0.20,
+          headerSize: size.height * 0.050,
+          bodySize: size.height * 0.030,
+          gapSize: size.height * 0.005,
+          gapSize2: size.height * 0.025,
+          buttonSize: size.height * 0.025,
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+        ),
       ),
       Expanded(
           child: Stack(children: [

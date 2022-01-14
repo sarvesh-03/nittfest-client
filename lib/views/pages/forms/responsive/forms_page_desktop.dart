@@ -4,7 +4,6 @@ import 'package:nittfest/controllers/forms_controller.dart';
 import 'package:nittfest/views/pages/forms/widgets/card_content.dart';
 import 'package:nittfest/views/pages/forms/widgets/carousel.dart';
 import 'package:nittfest/views/pages/forms/widgets/carousel_navigator.dart';
-import 'package:nittfest/views/themes/app_themes.dart';
 
 class FormsPagePhone extends StatelessWidget {
   const FormsPagePhone({Key? key}) : super(key: key);
@@ -12,15 +11,15 @@ class FormsPagePhone extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var controller = Get.find<FormsController>();
-    
+
     return Stack(children: [
       Positioned(
           top: 10,
           left: 10,
           child: Image.asset(
             'assets/logo_nf.png',
-            color: AppTheme.bodycolor,
-            width: 45,
+            color: Colors.white,
+            width: 25,
           )),
       Carousel(
         children: controller.content

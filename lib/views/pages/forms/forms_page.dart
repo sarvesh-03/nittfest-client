@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_weather_bg_null_safety/flutter_weather_bg.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 
 import 'package:nittfest/constants/break_points.dart';
@@ -12,15 +13,30 @@ class FormsPage extends GetView<HomeController> {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
-    ImageProvider bg = const AssetImage('assets/bg.png');
+    ImageProvider bg = const AssetImage('assets/bg1.webp');
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
-        height: size.height,
-        width: size.width,
-        decoration:
-            BoxDecoration(image: DecorationImage(image: bg, fit: BoxFit.cover)),
-        child: FormsPageResponsive(),
-      ),
+          height: size.height,
+          width: size.width,
+          decoration: BoxDecoration(
+              shape: BoxShape.rectangle,
+              image: DecorationImage(image: bg, fit: BoxFit.fill)),
+          child: Stack(children: [
+            Opacity(
+                opacity: 0.35,
+                child: WeatherBg(
+                  width: size.width,
+                  height: size.height,
+                  weatherType: WeatherType.cloudyNight,
+                )),
+            Container(
+              width: size.width,
+              height: size.height,
+              color: Colors.black54,
+            ),
+            FormsPageResponsive(),
+          ])),
     );
   }
 }

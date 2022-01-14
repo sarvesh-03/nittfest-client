@@ -23,6 +23,7 @@ class SocialIcons extends StatelessWidget {
           fabColor: AppTheme.bodycolor,
           fabCloseIcon: const Icon(Icons.close, color: Colors.black),
           ringDiameter: 240,
+          animationDuration: const Duration(milliseconds: 400),
           alignment: Alignment.bottomLeft,
           children: <Widget>[
             IconButton(
