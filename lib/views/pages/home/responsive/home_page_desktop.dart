@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_weather_bg_null_safety/flutter_weather_bg.dart';
 import 'package:nittfest/views/pages/home/widgets/baloon.dart';
 import 'package:nittfest/views/pages/home/widgets/content.dart';
 import 'package:nittfest/views/pages/home/widgets/footer.dart';
-import 'package:nittfest/views/pages/home/widgets/giant_wheel.dart';
 import 'package:nittfest/views/pages/home/widgets/spinner.dart';
 
 class HomePageDesktop extends StatelessWidget {
@@ -26,9 +24,9 @@ class HomePageDesktop extends StatelessWidget {
               buttonSize: 20.0),
         )),
         Expanded(
-            child: Stack(children: [
-          const Positioned(right: 1, top: 50, child: Baloon()),
-          const Center(child: Spinner()),
+            child: Stack(children: const [
+          Positioned(right: 1, top: 50, child: Baloon()),
+          Center(child: Spinner()),
         ]))
       ]),
       const Positioned(
